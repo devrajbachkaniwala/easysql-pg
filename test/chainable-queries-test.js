@@ -1,9 +1,8 @@
 const assert = require('chai').assert;
-const queries = require('../app');
+const queries = require('../chainable-queries');
 
-
-describe('App', () => {
-    it('Where Equal result ', async () => {
+describe('Chainable Queries ', () => {
+    it('Where Equal To result ', async () => {
         const actualResult = (await queries.whereEqualTo()).rows;
         const expectedResult = [{
             emp_id: 1,

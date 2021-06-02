@@ -84,7 +84,7 @@ const whereNotBetween = () => {
 }
 
 const groupBy = () => {
-  return db.read.columns(['count(emp_id) as total', 'dept_id']).tables('emp').groupBy('dept_id').get();
+  return db.read.columns(['count(emp_id) as total', 'dept_id']).tables('emp').groupBy(['dept_id']).get();
 }
 
 const having = () => {
